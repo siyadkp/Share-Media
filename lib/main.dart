@@ -14,30 +14,30 @@ void main() {
       [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
 }
 
-
- // This widget is the root of the application.
+// This widget is the root of the application.
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
- 
   @override
   Widget build(BuildContext context) {
-    return FlutterSizer(builder: (context, orientation, screenType) {
-      return MultiProvider(
-        providers: [
-          ChangeNotifierProvider(create: (_) => HomeNotifier()),
-        ],
-        child: MaterialApp(
-          debugShowCheckedModeBanner: false,
-          title: 'Share Media',
-          theme: ThemeData(
-            colorScheme: ColorScheme.fromSeed(seedColor: KColors.blueGrey),
-            useMaterial3: true,
+    return FlutterSizer(
+      builder: (context, orientation, screenType) {
+        return MultiProvider(
+          providers: [
+            ChangeNotifierProvider(create: (_) => HomeNotifier()),
+          ],
+          child: MaterialApp(
+            debugShowCheckedModeBanner: false,
+            title: 'Share Media',
+            theme: ThemeData(
+              colorScheme: ColorScheme.fromSeed(seedColor: KColors.blueGrey),
+              useMaterial3: true,
+            ),
+            initialRoute: RouteGenarator.login,
+            onGenerateRoute: RouteGenarator.generateRoute,
           ),
-          initialRoute: RouteGenarator.login,
-          onGenerateRoute: RouteGenarator.generateRoute,
-        ),
-      );
-    },);
+        );
+      },
+    );
   }
 }

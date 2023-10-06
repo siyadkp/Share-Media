@@ -22,7 +22,7 @@ class RouteGenarator {
     switch (settings.name) {
       case login:
         return MaterialPageRoute(
-          builder: (_) =>   ScreenLogin(),
+          builder: (_) =>   const ScreenLogin(),
         );
       case register:
         return MaterialPageRoute(

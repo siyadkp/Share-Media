@@ -34,9 +34,9 @@ class ScreenUserProfile extends StatelessWidget {
               
             ],),
             Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-              SizedBox(width: 120, child: ElevatedButton(onPressed: (){}, child: const Text('Follow',style: TextStyle(color: Colors.white),),style: ButtonStyle(backgroundColor:MaterialStateProperty.all<Color>(const Color.fromARGB(255, 10, 131, 223)), ),)),
+              SizedBox(width: 120, child: ElevatedButton(onPressed: (){},style: ButtonStyle(backgroundColor:MaterialStateProperty.all<Color>(const Color.fromARGB(255, 10, 131, 223)), ), child: const Text('Follow',style: TextStyle(color: Colors.white),),)),
               const SizedBox(width: 20,),
-               SizedBox(width: 130, child: ElevatedButton(onPressed: (){}, child: const Text('Message',style: TextStyle(color: Colors.white),),style: ButtonStyle(backgroundColor:MaterialStateProperty.all<Color>(const Color.fromARGB(255, 10, 131, 223)), ),)),
+               SizedBox(width: 130, child: ElevatedButton(onPressed: (){},style: ButtonStyle(backgroundColor:MaterialStateProperty.all<Color>(const Color.fromARGB(255, 10, 131, 223)), ), child: const Text('Message',style: TextStyle(color: Colors.white),),)),
             ],)
         ],
       ),
